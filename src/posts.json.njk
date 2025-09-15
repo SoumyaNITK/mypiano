@@ -1,0 +1,16 @@
+---
+permalink: "/posts.json"
+---
+[
+{% for post in collections.posts %}
+  {
+    "file": "{{ post.fileSlug }}",
+    "url": "{{ post.url }}",
+    "title": {{ post.data.title | dump }},
+    "date": "{{ post.data.date or post.date }}",
+    "section": "{{ post.data.section | default('others') }}",
+    "tags": {{ post.data.tags | dump }},
+    "excerpt": {{ (post.templateContent | striptags | truncate(200)) | dump }}
+  }{% if not loop.last %},{% endif %}
+{% endfor %}
+]

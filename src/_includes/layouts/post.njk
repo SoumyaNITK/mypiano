@@ -1,0 +1,12 @@
+{% extends "layouts/base.njk" %}
+
+{% block content %}
+<article class="container">
+  <h1>{{ title }}</h1>
+  <p class="date">{{ date | date("yyyy-MM-dd") }}</p>
+  <div class="content">
+    {{ content | safe }}
+  </div>
+  <a href="/" class="go-back">← Go Back</a>
+</article>
+{% endblock %}

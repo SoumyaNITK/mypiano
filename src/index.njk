@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: "My Piano"
+---
+
+<section class="hero">
+  <div class="hero-inner">
+    <h1 class="brand"><a href="/">My Piano</a></h1>
+    <p class="tagline">Chords • Notes • Tiny lessons — practice-ready snippets.</p>
+
+    <div class="hero-actions">
+      <input id="search" placeholder="Search posts, chords, tags..." />
+      <div class="filters">
+        <button class="filter-btn active" data-section="all">All</button>
+        <button class="filter-btn" data-section="notes">Notes</button>
+        <button class="filter-btn" data-section="chords">Chords</button>
+        <button class="filter-btn" data-section="others">Others</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="container">
+  <h2 class="section-title">Latest posts</h2>
+  <div id="posts-grid" class="posts-grid">
+    {% for post in collections.posts | slice(0,10) %}
+      {% include "components/post-card.njk" with { post: post } %}
+    {% endfor %}
+  </div>
+</main>
+
+<script src="/assets/js/main.js"></script>
