@@ -1,0 +1,15 @@
+---
+title: "Notes"
+layout: layouts/base.njk
+---
+
+<h2>Notes</h2>
+<ul class="post-list">
+  {% for post in collections.posts | reverse %}
+    {% if post.data.section == "notes" %}
+      <li class="post-item">
+        {% include "components/post-card.njk" %}
+      </li>
+    {% endif %}
+  {% endfor %}
+</ul>

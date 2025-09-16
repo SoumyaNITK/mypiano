@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+  <h1>
+    <a href="/" style="color: #ffcc66; text-decoration: none;">My Piano</a>
+  </h1>
+  
+</header>
+
+  <main class="container">
+    <div class="search-container">
+  <input type="text" id="searchInput" placeholder="Search posts by title...">
+</div>
+
+<nav class="section-nav">
+  <ul>
+    <li><a href="#" data-section="all" class="active">All</a></li>
+    <li><a href="#" data-section="notes">Notes</a></li>
+    <li><a href="#" data-section="chords">Chords</a></li>
+  </ul>
+</nav>
+<section class="posts">
+  <ul class="post-list">
+    
+      <li class="post-item" data-section="notes">
+        <a href="/posts/first-note/">
+  <div class="post-card">
+    <h2>My First Note</h2>
+    <time>16 Sep 2025</time>
+    <p>This is the content of my first note.</p>
+  </div>
+</a>
+
+      </li>
+    
+      <li class="post-item" data-section="chords">
+        <a href="/posts/first-chord/">
+  <div class="post-card">
+    <h2>My First Chord</h2>
+    <time>16 Sep 2025</time>
+    <p>This is the content of my first chord. Add any details you want.</p>
+  </div>
+</a>
+
+      </li>
+    
+  </ul>
+</section>
+
+
+
+<script>
+const sectionLinks = document.querySelectorAll('.section-nav a');
+const posts = document.querySelectorAll('.post-item');
+
+sectionLinks.forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+
+    sectionLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+
+    const section = link.dataset.section;
+
+    posts.forEach(post => {
+      if(section === 'all' || post.dataset.section === section) {
+        post.style.display = 'block';
+      } else {
+        post.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+  </main>
+
+  <footer>
+    &copy; 2025 My Piano. All rights reserved.
+  </footer>
+<script src="/assets/js/search.js"></script>
+</body>
+</html>

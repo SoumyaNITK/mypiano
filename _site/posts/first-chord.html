@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>C Major Chord Explained</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>My Piano</h1>
+    <p>Echoes of music</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="chords.html">Chords</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search posts...">
+      <button onclick="searchPosts()">Search</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <p>The C Major chord consists of three notes: C, E, and G.<br>
+It is one of the most common chords in piano music.</p>
+
+  </main>
+
+  <footer>
+    &copy; Invalid DateTime My Piano. All rights reserved.
+  </footer>
+
+  <script>
+    function searchPosts() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const posts = document.querySelectorAll('.post-list a');
+      posts.forEach(post => {
+        const text = post.textContent.toLowerCase();
+        post.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

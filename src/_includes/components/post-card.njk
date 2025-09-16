@@ -1,7 +1,7 @@
-<div class="post-card" data-section="{{ post.data.section }}">
-  <a href="{{ post.url }}">
-    <h3>{{ post.data.title }}</h3>
-    <p class="date">{{ post.date | date("yyyy-MM-dd") }}</p>
-    <p class="section">{{ post.data.section | capitalize }}</p>
-  </a>
-</div>
+<a href="{{ post.url }}">
+  <div class="post-card">
+    <h2>{{ post.data.title }}</h2>
+    <time>{{ post.date | date("dd MMM yyyy") }}</time>
+    <p>{{ post.templateContent | striptags | truncate(150, true) }}</p>
+  </div>
+</a>

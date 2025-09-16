@@ -1,20 +1,19 @@
 {
   "name": "mypiano",
   "version": "1.0.0",
-  "private": true,
+  "description": "Gudu's Piano Notes",
+  "main": ".eleventy.js",
   "scripts": {
     "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy",
-    "new": "node ./scripts/new-post.js",
-    "deploy": "npm run build && npx gh-pages -d _site"
+    "build": "eleventy",
+    "new": "node scripts/new-post.js",
+    "deploy": "npm run build && git add . && git commit -m \"Build site\" && git subtree push --prefix _site origin gh-pages"
   },
+  "author": "Gudu",
+  "license": "ISC",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
     "luxon": "^3.6.1",
-    "slugify": "^1.6.6",
-    "gh-pages": "^5.0.0"
-  },
-  "engines": {
-    "node": ">=14"
+    "slugify": "^1.6.6"
   }
 }

@@ -1,29 +1,27 @@
-const { DateTime } = require("luxon");
+const { DateTime } = require("luxon"); // for date formatting
 
 module.exports = function(eleventyConfig) {
-  // Copy CSS and JS assets
-  eleventyConfig.addPassthroughCopy("src/assets/css");
-  eleventyConfig.addPassthroughCopy("src/assets/js");
+  // Copy assets
+  eleventyConfig.addPassthroughCopy("src/assets");
 
-  // Date filter
-  eleventyConfig.addFilter("date", (value, format = "yyyy-MM-dd") => {
-    return DateTime.fromJSDate(value).toFormat(format);
+  // Collection of posts
+  eleventyConfig.addCollection("posts", function(collectionApi) {
+    return collectionApi.getFilteredByGlob("src/posts/*.md");
   });
 
-  // Posts collection
-  eleventyConfig.addCollection("posts", function(collectionApi) {
-    return collectionApi.getFilteredByGlob("src/posts/*.md").sort((a,b) => b.date - a.date);
+  // Add date filter for Nunjucks
+  eleventyConfig.addNunjucksFilter("date", function(dateObj, format = "dd LLL yyyy") {
+    return DateTime.fromJSDate(dateObj).toFormat(format);
   });
 
   return {
     dir: {
       input: "src",
-      includes: "_includes",
-      output: "_site"
+      output: "_site",
+      includes: "_includes"
     },
-    htmlTemplateEngine: "njk",
     markdownTemplateEngine: "njk",
-    templateFormats: ["md", "njk", "html"],
-    passthroughFileCopy: true
+    htmlTemplateEngine: "njk",
+    dataTemplateEngine: "njk"
   };
 };

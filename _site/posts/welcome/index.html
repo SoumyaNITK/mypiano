@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Understanding the C Major Scale</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <h1>My Piano</h1>
+    <p>Echoes of music, captured in thoughts</p>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="notes.html">Notes</a></li>
+        <li><a href="chords.html">Chords</a></li>
+      </ul>
+    </nav>
+
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search posts...">
+      <button onclick="searchPosts()">Search</button>
+    </div>
+  </header>
+
+  <main class="container">
+    <p>The C Major scale is the foundation of many piano pieces.<br>
+It consists of the notes C, D, E, F, G, A, B, C.</p>
+<p>You can add <strong>bold</strong>, <em>italic</em>, lists, or even links like <a href="https://example.com">Piano Lessons</a>.</p>
+
+  </main>
+
+  <footer>
+    &copy; Invalid DateTime My Piano. All rights reserved.
+  </footer>
+
+  <script>
+    function searchPosts() {
+      const query = document.getElementById('searchInput').value.toLowerCase();
+      const posts = document.querySelectorAll('.post-list a');
+      posts.forEach(post => {
+        const text = post.textContent.toLowerCase();
+        post.style.display = text.includes(query) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>

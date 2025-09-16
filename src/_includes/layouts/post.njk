@@ -1,12 +1,31 @@
-{% extends "layouts/base.njk" %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ title }}</title>
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header>
+  <h1>
+    <a href="/" style="color: #ffcc66; text-decoration: none;">My Piano</a>
+  </h1>
+  <hr class="logo-separator">
+  <h2>{{ title }}</h2>
+  {% if date %}<time>{{ date | date("dd MMM yyyy") }}</time>{% endif %}
+</header>
 
-{% block content %}
-<article class="container">
-  <h1>{{ title }}</h1>
-  <p class="date">{{ date | date("yyyy-MM-dd") }}</p>
-  <div class="content">
-    {{ content | safe }}
-  </div>
-  <a href="/" class="go-back">← Go Back</a>
-</article>
-{% endblock %}
+  <main class="container">
+    <article class="post">
+      {{ content | safe }}
+    </article>
+    <div class="back-button-container">
+      <a href="/" class="back-button">← Go Back</a>
+    </div>
+  </main>
+
+  <footer>
+    &copy; {{ "now" | date("yyyy") }} My Piano
+  </footer>
+</body>
+</html>

@@ -1,17 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 <body>
   <header>
-    <h1 class="logo"><a href="/">My Piano</a></h1>
-  </header>
+  <h1>
+    <a href="/" style="color: #ffcc66; text-decoration: none;">My Piano</a>
+  </h1>
+  {% if siteDescription %}
+    <p>{{ siteDescription }}</p>
+  {% endif %}
+</header>
 
-  {{ content | safe }}
+  <main class="container">
+    {{ content | safe }}
+  </main>
 
+  <footer>
+    &copy; 2025 My Piano. All rights reserved.
+  </footer>
+<script src="/assets/js/search.js"></script>
 </body>
 </html>
