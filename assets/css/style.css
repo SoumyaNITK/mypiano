@@ -1,33 +1,188 @@
-/* Base Reset */
-* { margin:0; padding:0; box-sizing:border-box; }
-
+/* ===== Dark Theme Global Styles ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-  color: #fff;
-  line-height: 1.6;
+  background: linear-gradient(180deg, #1a1a1a, #2c1810, #5a2e1c);
+  color: #f0f0f0;
+  margin: 0;
+  padding: 0;
+  line-height: 1.7;
 }
 
-.container { max-width:900px; margin:auto; padding:2rem; }
+/* ===== Layout ===== */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
 
-header { text-align:center; margin-bottom:2rem; }
+/* ===== Header ===== */
+header {
+  text-align: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid #333;
+}
 
-header .logo a { color:#0ff; font-size:2rem; text-decoration:none; }
+header h1 {
+  font-size: 2.5rem;
+  color: #ffcc66;
+  margin-bottom: 0.5rem;
+}
 
-.hero { text-align:center; margin-bottom:2rem; }
+header p {
+  font-size: 1.1rem;
+  color: #aaa;
+  font-style: italic;
+}
+.logo-separator {
+  border: 0;
+  height: 1px;
+  background: #ffcc66;
+  margin: 0.5rem 0 1rem 0;
+  opacity: 0.5;
+}
 
-.hero input { padding:0.5rem; width:60%; margin-bottom:1rem; border-radius:8px; border:none; }
 
-.filters { display:flex; justify-content:center; gap:1rem; }
+/* ===== Links ===== */
+a {
+  color: #66ccff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
 
-.filter-btn { padding:0.5rem 1rem; border:none; border-radius:8px; cursor:pointer; transition:0.2s; }
+a:hover {
+  color: #ffcc66;
+}
 
-.filter-btn.active { background:#0ff; color:#000; }
+/* ===== Post List ===== */
+.post-list {
+  margin-top: 2rem;
+  padding: 0;
+  list-style: none;
+}
 
-.posts-grid { display:grid; grid-template-columns: repeat(auto-fit,minmax(250px,1fr)); gap:1rem; }
+.post-item {
+  margin: 1rem 0;
+}
 
-.post-card { padding:1rem; background:rgba(255,255,255,0.1); border-radius:12px; transition:0.3s; }
+/* ===== Individual Post Card ===== */
+.post-card {
+  background: #1a1a1a;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 1px solid #333;
+  transition: transform 0.2s, background 0.3s;
+}
 
-.post-card:hover { background:rgba(0,255,255,0.2); transform:translateY(-2px); }
+.post-card:hover {
+  background: #262626;
+  transform: translateX(5px);
+}
+.back-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
 
-.go-back { display:inline-block; margin-top:1rem; text-decoration:none; color:#0ff; }
+.back-button {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #ffcc66; /* gold button */
+  color: #1a1a1a;      /* dark text */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: #1a1a1a; /* dark background on hover */
+  color: #ffcc66;       /* gold text on hover */
+  transform: translateY(-2px);
+  border: 1px solid #ffcc66; /* adds subtle outline */
+}
+
+.post-card h2 {
+  margin: 0 0 0.5rem 0;
+  color: #ffcc66;
+  font-size: 1.4rem;
+}
+
+.post-card time {
+  display: block;
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 0.5rem;
+}
+
+.post-card p {
+  margin: 0.5rem 0 0 0;
+  color: #ccc;
+}
+
+/* ===== Footer ===== */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid #333;
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* ===== Section Navigation ===== */
+.section-nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #333;
+  font-size: 1rem;
+}
+
+
+.section-nav ul li {
+  margin: 0 10px;
+}
+
+.section-nav ul li a {
+  padding: 6px 12px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: #66ccff;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+}
+
+.section-nav ul li a:hover,
+.section-nav ul li a.active {
+  background: #ffcc66;
+  color: #1a1a1a;
+  border-color: #ffcc66;
+  cursor: pointer;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 600px) {
+  .section-nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .section-nav ul li {
+    margin: 5px 0;
+  }
+}

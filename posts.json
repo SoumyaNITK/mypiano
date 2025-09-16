@@ -1,13 +1,23 @@
 [
 
   {
-    "file": "welcome",
-    "url": "/posts/welcome/",
-    "title": &quot;Welcome to Gudu&#39;s Piano Notes&quot;,
-    "date": "Mon Sep 15 2025 05:30:00 GMT+0530 (India Standard Time)",
-    "section": "others",
-    "tags": [&quot;intro&quot;],
-    "excerpt": &quot;Hello! This is your first post. 🎹 Here you can write about chords, notes, and tiny piano lessons.&quot;
+    "file": "first-chord",
+    "url": "/posts/first-chord/",
+    "title": &quot;My First Chord&quot;,
+    "date": "Tue Sep 16 2025 05:30:00 GMT+0530 (India Standard Time)",
+    "section": "chords",
+    "tags": ,
+    "excerpt": &quot;This is the content of my first chord. Add any details you want.&quot;
+  },
+
+  {
+    "file": "first-note",
+    "url": "/posts/first-note/",
+    "title": &quot;My First Note&quot;,
+    "date": "Tue Sep 16 2025 05:30:00 GMT+0530 (India Standard Time)",
+    "section": "notes",
+    "tags": ,
+    "excerpt": &quot;This is the content of my first note.&quot;
   }
 
 ]
