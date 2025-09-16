@@ -1,4 +1,4 @@
-<a href="{{ post.url }}">
+<a href="{{ post.url | url }}">
   <div class="post-card">
     <h2>{{ post.data.title }}</h2>
     <time>{{ post.date | date("dd MMM yyyy") }}</time>
