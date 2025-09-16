@@ -1,8 +1,8 @@
-/* ===== Dark Theme Global Styles ===== */
+/* ===== Dark Elegant Theme (Piano Vibes) ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #1a1a1a, #2c1810, #5a2e1c);
-  color: #f0f0f0;
+  background: linear-gradient(180deg, #0d0d0d, #1a0e0a, #2b1a10);
+  color: #f5f5f5;
   margin: 0;
   padding: 0;
   line-height: 1.7;
@@ -19,38 +19,38 @@ body {
 header {
   text-align: center;
   padding: 2rem 0;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid #3a2a20;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #ffcc66;
+  color: #d4af37; /* rich gold */
   margin-bottom: 0.5rem;
 }
 
 header p {
   font-size: 1.1rem;
-  color: #aaa;
+  color: #b3a68b;
   font-style: italic;
 }
+
 .logo-separator {
   border: 0;
   height: 1px;
-  background: #ffcc66;
+  background: #d4af37;
   margin: 0.5rem 0 1rem 0;
   opacity: 0.5;
 }
 
-
 /* ===== Links ===== */
 a {
-  color: #66ccff;
+  color: #d4af37;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #ffcc66;
+  color: #ffdd88;
 }
 
 /* ===== Post List ===== */
@@ -66,17 +66,18 @@ a:hover {
 
 /* ===== Individual Post Card ===== */
 .post-card {
-  background: #1a1a1a;
+  background: #1a1410;
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid #333;
+  border: 1px solid #3a2a20;
   transition: transform 0.2s, background 0.3s;
 }
 
 .post-card:hover {
-  background: #262626;
+  background: #221914;
   transform: translateX(5px);
 }
+
 .back-button-container {
   margin-top: 2rem;
   text-align: center;
@@ -85,8 +86,8 @@ a:hover {
 .back-button {
   display: inline-block;
   padding: 8px 16px;
-  background: #ffcc66; /* gold button */
-  color: #1a1a1a;      /* dark text */
+  background: #d4af37; /* gold button */
+  color: #1a1410;      /* dark text */
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -94,38 +95,38 @@ a:hover {
 }
 
 .back-button:hover {
-  background: #1a1a1a; /* dark background on hover */
-  color: #ffcc66;       /* gold text on hover */
+  background: #1a1410;
+  color: #d4af37;
   transform: translateY(-2px);
-  border: 1px solid #ffcc66; /* adds subtle outline */
+  border: 1px solid #d4af37;
 }
 
 .post-card h2 {
   margin: 0 0 0.5rem 0;
-  color: #ffcc66;
+  color: #ffdd88;
   font-size: 1.4rem;
 }
 
 .post-card time {
   display: block;
   font-size: 0.9rem;
-  color: #888;
+  color: #a48c6c;
   margin-bottom: 0.5rem;
 }
 
 .post-card p {
   margin: 0.5rem 0 0 0;
-  color: #ccc;
+  color: #dcdcdc;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 2rem 0;
-  border-top: 1px solid #333;
+  border-top: 1px solid #3a2a20;
   margin-top: 3rem;
   font-size: 0.9rem;
-  color: #666;
+  color: #8c7b6a;
 }
 
 /* ===== Section Navigation ===== */
@@ -137,6 +138,7 @@ footer {
   margin: 1rem 0;
   flex-wrap: wrap;
 }
+
 .search-container {
   display: flex;
   justify-content: center;
@@ -148,11 +150,13 @@ footer {
   max-width: 400px;
   padding: 8px 12px;
   border-radius: 6px;
-  border: 1px solid #333;
+  border: 1px solid #3a2a20;
   font-size: 1rem;
+  background: #1a1410;
+  color: #f5f5f5;
 }
 
-
+/* ===== Nav Buttons ===== */
 .section-nav ul li {
   margin: 0 10px;
 }
@@ -161,17 +165,17 @@ footer {
   padding: 6px 12px;
   border-radius: 5px;
   font-weight: bold;
-  color: #66ccff;
-  background: #1a1a1a;
-  border: 1px solid #333;
+  color: #d4af37;
+  background: #1a1410;
+  border: 1px solid #3a2a20;
   transition: all 0.3s ease;
 }
 
 .section-nav ul li a:hover,
 .section-nav ul li a.active {
-  background: #ffcc66;
-  color: #1a1a1a;
-  border-color: #ffcc66;
+  background: #d4af37;
+  color: #1a1410;
+  border-color: #d4af37;
   cursor: pointer;
 }
 
