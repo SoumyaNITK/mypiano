@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>{{ title }}</title>
-  <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | url }}">
 </head>
 <body>
   <header>
@@ -20,7 +20,7 @@
       {{ content | safe }}
     </article>
     <div class="back-button-container">
-      <a href="/" class="back-button">← Go Back</a>
+      <a href="{{ '/' | url }}" class="back-button">← Go Back</a>
     </div>
   </main>
 
