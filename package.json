@@ -7,7 +7,7 @@
     "start": "npx @11ty/eleventy --serve",
     "build": "eleventy",
     "new": "node scripts/new-post.js",
-    "deploy": "npm run build && git add . && git commit -m \"Build site\" && git subtree push --prefix _site origin gh-pages"
+    "deploy": "eleventy && npx gh-pages -d _site"
   },
   "author": "Gudu",
   "license": "ISC",
@@ -15,5 +15,8 @@
     "@11ty/eleventy": "^3.1.2",
     "luxon": "^3.6.1",
     "slugify": "^1.6.6"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
   }
 }
