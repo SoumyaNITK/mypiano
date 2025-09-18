@@ -97,6 +97,17 @@ a:hover {
   margin: 0.5rem 0 0 0;
   color: #dcdcdc;
 }
+blockquote {
+  background: #1a1410;
+  border-left: 4px solid #d4af37;
+  color: #ffdd88;
+  font-family: 'Courier New', monospace;
+  padding: 8px 12px;
+  margin: 0.5rem 0 1rem 0;
+  border-radius: 6px;
+  box-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
+}
+
 
 /* ===== Back Button ===== */
 .back-button-container {
