@@ -18,7 +18,7 @@ body {
 /* ===== Header ===== */
 header {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   border-bottom: 1px solid #3a2a20;
 }
 
@@ -26,12 +26,14 @@ header h1 {
   font-size: 2.5rem;
   color: #d4af37; /* rich gold */
   margin-bottom: 0.5rem;
+  line-height: 1.2;
 }
 
 header p {
   font-size: 1.1rem;
   color: #b3a68b;
   font-style: italic;
+  margin: 0.5rem 0 0;
 }
 
 .logo-separator {
@@ -78,29 +80,6 @@ a:hover {
   transform: translateX(5px);
 }
 
-.back-button-container {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.back-button {
-  display: inline-block;
-  padding: 8px 16px;
-  background: #d4af37; /* gold button */
-  color: #1a1410;      /* dark text */
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.back-button:hover {
-  background: #1a1410;
-  color: #d4af37;
-  transform: translateY(-2px);
-  border: 1px solid #d4af37;
-}
-
 .post-card h2 {
   margin: 0 0 0.5rem 0;
   color: #ffdd88;
@@ -119,10 +98,34 @@ a:hover {
   color: #dcdcdc;
 }
 
+/* ===== Back Button ===== */
+.back-button-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.back-button {
+  display: inline-block;
+  padding: 10px 18px;
+  background: #d4af37; /* gold button */
+  color: #1a1410;      /* dark text */
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: #1a1410;
+  color: #d4af37;
+  transform: translateY(-2px);
+  border: 1px solid #d4af37;
+}
+
 /* ===== Footer ===== */
 footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: 2rem 1rem;
   border-top: 1px solid #3a2a20;
   margin-top: 3rem;
   font-size: 0.9rem;
@@ -139,24 +142,6 @@ footer {
   flex-wrap: wrap;
 }
 
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.search-container input {
-  width: 100%;
-  max-width: 400px;
-  padding: 8px 12px;
-  border-radius: 6px;
-  border: 1px solid #3a2a20;
-  font-size: 1rem;
-  background: #1a1410;
-  color: #f5f5f5;
-}
-
-/* ===== Nav Buttons ===== */
 .section-nav ul li {
   margin: 0 10px;
 }
@@ -179,14 +164,63 @@ footer {
   cursor: pointer;
 }
 
+/* ===== Search Bar ===== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #3a2a20;
+  font-size: 1rem;
+  background: #1a1410;
+  color: #f5f5f5;
+}
+
 /* ===== Responsive ===== */
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .post-card {
+    padding: 1.2rem;
+  }
+}
+
 @media screen and (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .post-card h2 {
+    font-size: 1.2rem;
+  }
+
   .section-nav ul {
     flex-direction: column;
     align-items: center;
   }
   
   .section-nav ul li {
-    margin: 5px 0;
+    margin: 6px 0;
   }
 }
