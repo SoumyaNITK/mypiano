@@ -65,6 +65,36 @@ a:hover {
 .post-item {
   margin: 1rem 0;
 }
+.section-nav ul {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;   /* allows wrapping if screen is very small */
+  list-style: none;
+  padding: 0;
+  margin: 10px 0;
+  gap: 10px;  /* space between buttons */
+}
+
+.section-nav li {
+  margin: 0; /* remove default li spacing */
+}
+
+.section-nav a {
+  display: inline-block;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #ffcc66;
+  color: #222;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.2s ease;
+}
+
+.section-nav a.active,
+.section-nav a:hover {
+  background: #ffaa33;
+}
+
 
 /* ===== Individual Post Card ===== */
 .post-card {
