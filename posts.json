@@ -11,16 +11,6 @@
   },
 
   {
-    "file": "first-note",
-    "url": "/posts/first-note/",
-    "title": &quot;My First Note&quot;,
-    "date": "Tue Sep 16 2025 05:30:00 GMT+0530 (India Standard Time)",
-    "section": "notes",
-    "tags": ,
-    "excerpt": &quot;This is the content of my first note.&quot;
-  },
-
-  {
     "file": "1-happy-birthday",
     "url": "/posts/2025-09-18-1-happy-birthday/",
     "title": &quot;1 - Happy Birthday Piano Notes&quot;,
