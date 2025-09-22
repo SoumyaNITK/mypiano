@@ -1,16 +1,6 @@
 [
 
   {
-    "file": "first-chord",
-    "url": "/posts/first-chord/",
-    "title": &quot;My First Chord&quot;,
-    "date": "Tue Sep 16 2025 05:30:00 GMT+0530 (India Standard Time)",
-    "section": "chords",
-    "tags": ,
-    "excerpt": &quot;This is the content of my first chord. Add any details you want.&quot;
-  },
-
-  {
     "file": "1-happy-birthday",
     "url": "/posts/2025-09-18-1-happy-birthday/",
     "title": &quot;1 - Happy Birthday Piano Notes&quot;,
@@ -18,6 +8,16 @@
     "section": "notes",
     "tags": [],
     "excerpt": &quot;Happy birthday to you G4 G4 A4 G4 C5 B4 Happy birthday to you G4 G4 A4 G4 D5 C5 Happy birthday dear Someone G4 G4 G5 E5 C5 B4 A4 Happy Birthday to you F5 F5 E5 C5 D5 C5&quot;
+  },
+
+  {
+    "file": "2-woh-ladkiandhadhun-piano-chords",
+    "url": "/posts/2025-09-22-2-woh-ladkiandhadhun-piano-chords/",
+    "title": &quot;2 - Woh Ladki(Andhadhun) Piano Chords&quot;,
+    "date": "Mon Sep 22 2025 05:30:00 GMT+0530 (India Standard Time)",
+    "section": "chords",
+    "tags": [],
+    "excerpt": &quot;#INTRO Fm C Fm C Fm Bbm Ab C Fm Fm Bbm C Fm Fm #VERSE Ik sanwari si ladki baawari si Fm C Fm Bbm C Gusse mein patte si kaanpti si Fm C Fm Bbm C Jo mera zikr sune bhool se bhi Fm C Fm Bbm C Tarqeebon...&quot;
   }
 
 ]
