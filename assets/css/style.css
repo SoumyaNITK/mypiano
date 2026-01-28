@@ -24,7 +24,7 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #d4af37; /* rich gold */
+  color: #d4af37;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -69,24 +69,24 @@ a:hover {
 /* ===== Section Navigation ===== */
 .section-nav {
   margin: 1rem 0;
-  overflow-x: auto;   /* enable horizontal scroll on mobile */
+  overflow-x: auto;
   -webkit-overflow-scrolling: touch;
 }
 
 .section-nav ul {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;   /* keep in a row */
+  flex-wrap: nowrap;
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 10px;
-  min-width: max-content; /* prevent squishing */
+  min-width: max-content;
 }
 
 .section-nav li {
   margin: 0;
-  flex: 0 0 auto; /* don’t stretch */
+  flex: 0 0 auto;
 }
 
 .section-nav a {
@@ -98,7 +98,7 @@ a:hover {
   text-decoration: none;
   font-weight: 600;
   transition: background 0.2s ease;
-  white-space: nowrap; /* keep text in one line */
+  white-space: nowrap;
 }
 
 .section-nav a.active,
@@ -160,8 +160,8 @@ blockquote {
 .back-button {
   display: inline-block;
   padding: 10px 18px;
-  background: #d4af37; /* gold button */
-  color: #1a1410;      /* dark text */
+  background: #d4af37;
+  color: #1a1410;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -236,7 +236,6 @@ footer {
     font-size: 1.2rem;
   }
 
-  /* On mobile: keep nav row, enable scroll */
   .section-nav {
     overflow-x: auto;
     padding-bottom: 6px;
@@ -248,27 +247,20 @@ footer {
 }
 
 /* =====================================================
-   🎸 CHORD PLACEMENT — WORD WRAPPED (FINAL)
+   🎸 INLINE CHORD TAGS — FINAL & CLEAN
    ===================================================== */
 
-.post .chord-line {
-  line-height: 2.2;
-  margin: 0.8rem 0;
-}
-
-.post .cw {
-  position: relative;
+.post .chord-inline {
   display: inline-block;
-  margin-right: 0.25em;
-}
-
-.post .cw .chord {
-  position: absolute;
-  top: -1.35em;
-  left: 50%;
-  transform: translateX(-50%);
-  font-weight: 600;
-  font-size: 0.85rem;
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: #1a1410;
+  border: 1px solid #d4af37;
   color: #d4af37;
+  font-weight: 600;
+  font-size: 0.85em;
+  line-height: 1;
+  vertical-align: middle;
   white-space: nowrap;
 }
