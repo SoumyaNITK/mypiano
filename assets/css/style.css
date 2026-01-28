@@ -260,10 +260,13 @@ footer {
 }
 
 .post .chord {
-  position: absolute;
+  position: relative;
+  display: inline-block;
   transform: translateY(-1.3em);
   font-weight: 600;
   font-size: 0.85rem;
   color: #d4af37;
+  margin-right: 0.3em;
   white-space: nowrap;
 }
+
