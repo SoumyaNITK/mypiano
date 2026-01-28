@@ -246,3 +246,24 @@ footer {
     justify-content: flex-start;
   }
 }
+
+/* =====================================================
+   🎸 CHORD PLACEMENT (NEW – FOR CHORD POSTS)
+   ===================================================== */
+
+.post .chord-line {
+  position: relative;
+  padding-top: 1.6em;
+  margin: 0.8em 0;
+  line-height: 1.8;
+  font-size: 1.05rem;
+}
+
+.post .chord {
+  position: absolute;
+  transform: translateY(-1.3em);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #d4af37;
+  white-space: nowrap;
+}
