@@ -1,18 +1,18 @@
-/* ===== Dark Elegant Theme (Piano Vibes) ===== */
+/* ===== Dark Elegant Theme (Piano Vibes – Unified) ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
     180deg,
-    #0b0d12,
-    #0e121a,
-    #0b0d12
+    #0a0c10 0%,
+    #0d1119 35%,
+    #0b0d12 70%,
+    #080a0f 100%
   );
   color: #e6e6e6;
   margin: 0;
   padding: 0;
   line-height: 1.7;
 }
-
 
 /* ===== Layout ===== */
 .container {
@@ -25,19 +25,19 @@ body {
 header {
   text-align: center;
   padding: 2rem 1rem;
-  border-bottom: 1px solid #2a2f3a;
+  border-bottom: 1px solid #232833;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #5cc8ff;
+  color: #6ccfff; /* primary accent */
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
 header p {
   font-size: 1.1rem;
-  color: #a0a4ad;
+  color: #9aa0ad;
   font-style: italic;
   margin: 0.5rem 0 0;
 }
@@ -45,20 +45,20 @@ header p {
 .logo-separator {
   border: 0;
   height: 1px;
-  background: #5cc8ff;
+  background: linear-gradient(to right, transparent, #6ccfff, transparent);
   margin: 0.5rem 0 1rem 0;
-  opacity: 0.5;
+  opacity: 0.6;
 }
 
 /* ===== Links ===== */
 a {
-  color: #5cc8ff;
+  color: #6ccfff;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #8fdcff;
+  color: #9be1ff;
 }
 
 /* ===== Post List ===== */
@@ -99,62 +99,63 @@ a:hover {
   display: inline-block;
   padding: 8px 14px;
   border-radius: 6px;
-  background: #5cc8ff;
-  color: #0f1115;
+  background: linear-gradient(180deg, #6ccfff, #53bce9);
+  color: #0b0d12;
   text-decoration: none;
   font-weight: 600;
-  transition: background 0.2s ease;
+  transition: background 0.25s ease, color 0.25s ease;
   white-space: nowrap;
 }
 
 .section-nav a.active,
 .section-nav a:hover {
-  background: #0f1115;
-  color: #5cc8ff;
+  background: #0b0d12;
+  color: #6ccfff;
+  border: 1px solid #6ccfff;
 }
 
 /* ===== Individual Post Card ===== */
 .post-card {
-  background: #141820;
+  background: linear-gradient(180deg, #121722, #0f141d);
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid #2a2f3a;
+  border: 1px solid #232833;
   transition: transform 0.2s, background 0.3s;
 }
 
 .post-card:hover {
-  background: #1a1f2a;
+  background: linear-gradient(180deg, #161c28, #111624);
   transform: translateX(5px);
 }
 
 .post-card h2 {
   margin: 0 0 0.5rem 0;
-  color: #8fdcff;
+  color: #9be1ff;
   font-size: 1.4rem;
 }
 
 .post-card time {
   display: block;
   font-size: 0.9rem;
-  color: #8a8f99;
+  color: #8b90a0;
   margin-bottom: 0.5rem;
 }
 
 .post-card p {
   margin: 0.5rem 0 0 0;
-  color: #d0d0d0;
+  color: #d2d4da;
 }
 
 /* ===== Blockquote (for piano notes) ===== */
 blockquote {
-  background: #141820;
-  border-left: 4px solid #5cc8ff;
-  color: #8fdcff;
+  background: linear-gradient(180deg, #121722, #0f141d);
+  border-left: 4px solid #6ccfff;
+  color: #9be1ff;
   font-family: 'Courier New', monospace;
   padding: 8px 12px;
   margin: 0.5rem 0 1rem 0;
   border-radius: 6px;
-  box-shadow: 0 0 6px rgba(92, 200, 255, 0.35);
+  box-shadow: 0 0 8px rgba(108, 207, 255, 0.25);
 }
 
 /* ===== Back Button ===== */
@@ -166,8 +167,8 @@ blockquote {
 .back-button {
   display: inline-block;
   padding: 10px 18px;
-  background: #5cc8ff;
-  color: #0f1115;
+  background: linear-gradient(180deg, #6ccfff, #53bce9);
+  color: #0b0d12;
   text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
@@ -175,20 +176,20 @@ blockquote {
 }
 
 .back-button:hover {
-  background: #0f1115;
-  color: #5cc8ff;
+  background: #0b0d12;
+  color: #6ccfff;
   transform: translateY(-2px);
-  border: 1px solid #5cc8ff;
+  border: 1px solid #6ccfff;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  border-top: 1px solid #2a2f3a;
+  border-top: 1px solid #232833;
   margin-top: 3rem;
   font-size: 0.9rem;
-  color: #8a8f99;
+  color: #8b90a0;
 }
 
 /* ===== Search Bar ===== */
@@ -204,9 +205,9 @@ footer {
   max-width: 400px;
   padding: 10px 14px;
   border-radius: 6px;
-  border: 1px solid #2a2f3a;
+  border: 1px solid #232833;
   font-size: 1rem;
-  background: #141820;
+  background: #0f141d;
   color: #e6e6e6;
 }
 
@@ -261,9 +262,9 @@ footer {
   padding: 2px 6px;
   margin: 0 2px;
   border-radius: 4px;
-  background: #141820;
-  border: 1px solid #5cc8ff;
-  color: #5cc8ff;
+  background: linear-gradient(180deg, #121722, #0f141d);
+  border: 1px solid #6ccfff;
+  color: #6ccfff;
   font-weight: 600;
   font-size: 0.85em;
   line-height: 1;
