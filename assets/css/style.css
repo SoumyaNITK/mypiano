@@ -253,20 +253,14 @@ footer {
 
 .post .chord-line {
   position: relative;
-  padding-top: 1.6em;
-  margin: 0.8em 0;
-  line-height: 1.8;
-  font-size: 1.05rem;
+  line-height: 2.2;
 }
 
 .post .chord {
-  position: relative;
-  display: inline-block;
-  transform: translateY(-1.3em);
+  position: absolute;
+  transform: translateY(-1.4em);
   font-weight: 600;
   font-size: 0.85rem;
   color: #d4af37;
-  margin-right: 0.3em;
   white-space: nowrap;
 }
-
