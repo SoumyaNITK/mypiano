@@ -24,7 +24,7 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #d4af37;
+  color: #d4af37; /* rich gold */
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -69,24 +69,24 @@ a:hover {
 /* ===== Section Navigation ===== */
 .section-nav {
   margin: 1rem 0;
-  overflow-x: auto;
+  overflow-x: auto;   /* enable horizontal scroll on mobile */
   -webkit-overflow-scrolling: touch;
 }
 
 .section-nav ul {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
+  flex-wrap: nowrap;   /* keep in a row */
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 10px;
-  min-width: max-content;
+  min-width: max-content; /* prevent squishing */
 }
 
 .section-nav li {
   margin: 0;
-  flex: 0 0 auto;
+  flex: 0 0 auto; /* don’t stretch */
 }
 
 .section-nav a {
@@ -95,7 +95,10 @@ a:hover {
   border-radius: 6px;
   background: #d4af37;
   color: #1a1410;
+  text-decoration: none;
   font-weight: 600;
+  transition: background 0.2s ease;
+  white-space: nowrap; /* keep text in one line */
 }
 
 .section-nav a.active,
@@ -110,13 +113,33 @@ a:hover {
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #3a2a20;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.post-card:hover {
+  background: #221914;
+  transform: translateX(5px);
 }
 
 .post-card h2 {
+  margin: 0 0 0.5rem 0;
   color: #ffdd88;
+  font-size: 1.4rem;
 }
 
-/* ===== Piano Notes ===== */
+.post-card time {
+  display: block;
+  font-size: 0.9rem;
+  color: #a48c6c;
+  margin-bottom: 0.5rem;
+}
+
+.post-card p {
+  margin: 0.5rem 0 0 0;
+  color: #dcdcdc;
+}
+
+/* ===== Blockquote (for piano notes) ===== */
 blockquote {
   background: #1a1410;
   border-left: 4px solid #d4af37;
@@ -137,10 +160,19 @@ blockquote {
 .back-button {
   display: inline-block;
   padding: 10px 18px;
-  background: #d4af37;
-  color: #1a1410;
+  background: #d4af37; /* gold button */
+  color: #1a1410;      /* dark text */
+  text-decoration: none;
   font-weight: bold;
   border-radius: 6px;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.back-button:hover {
+  background: #1a1410;
+  color: #d4af37;
+  transform: translateY(-2px);
+  border: 1px solid #d4af37;
 }
 
 /* ===== Footer ===== */
@@ -153,46 +185,88 @@ footer {
   color: #8c7b6a;
 }
 
+/* ===== Search Bar ===== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: 1px solid #3a2a20;
+  font-size: 1rem;
+  background: #1a1410;
+  color: #f5f5f5;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 900px) {
+  .container {
+    padding: 1.5rem;
+  }
+
+  header h1 {
+    font-size: 2rem;
+  }
+
+  .post-card {
+    padding: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  header h1 {
+    font-size: 1.8rem;
+  }
+
+  .container {
+    padding: 1rem;
+  }
+
+  .post-card h2 {
+    font-size: 1.2rem;
+  }
+
+  /* On mobile: keep nav row, enable scroll */
+  .section-nav {
+    overflow-x: auto;
+    padding-bottom: 6px;
+  }
+
+  .section-nav ul {
+    justify-content: flex-start;
+  }
+}
+
 /* =====================================================
-   🎸 CHORDS — WORD-ANCHORED (FINAL, STABLE)
+   🎸 CHORD PLACEMENT (NEW – FOR CHORD POSTS)
    ===================================================== */
 
 .post .chord-line {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: 0.35em;
-  margin: 1.1em 0;
-}
-
-.post .cw {
-  display: inline-flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: max-content;
-}
-
-.post .cw .chord {
-  font-size: 0.75rem;
-  font-weight: 600;
-  color: #d4af37;
-  line-height: 1;
-  margin-bottom: 0.25em;
-}
-
-.post .cw .lyric {
+  position: relative;
+  padding-top: 1.6em;
+  margin: 0.8em 0;
+  line-height: 1.8;
   font-size: 1.05rem;
-  line-height: 1.3;
+}
+
+.post .chord {
+  position: relative;
+  display: inline-block;
+  transform: translateY(-1.3em);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: #d4af37;
+  margin-right: 0.3em;
   white-space: nowrap;
 }
 
-/* Mobile safety */
-@media screen and (max-width: 600px) {
-  .post .cw .chord {
-    font-size: 0.7rem;
-  }
-
-  .post .cw .lyric {
-    font-size: 1rem;
-  }
-}
