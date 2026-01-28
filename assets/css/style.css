@@ -1,8 +1,8 @@
-/* ===== Dark Elegant Theme (Piano Vibes) ===== */
+/* ===== Ivory & Charcoal Piano Theme ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(180deg, #0d0d0d, #1a0e0a, #2b1a10);
-  color: #f5f5f5;
+  background: #121212;
+  color: #f4f1ec;
   margin: 0;
   padding: 0;
   line-height: 1.7;
@@ -19,19 +19,19 @@ body {
 header {
   text-align: center;
   padding: 2rem 1rem;
-  border-bottom: 1px solid #3a2a20;
+  border-bottom: 1px solid #2a2a2a;
 }
 
 header h1 {
   font-size: 2.5rem;
-  color: #d4af37;
+  color: #8fd3c8;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
 
 header p {
   font-size: 1.1rem;
-  color: #b3a68b;
+  color: #c9c6c1;
   font-style: italic;
   margin: 0.5rem 0 0;
 }
@@ -39,20 +39,20 @@ header p {
 .logo-separator {
   border: 0;
   height: 1px;
-  background: #d4af37;
+  background: #8fd3c8;
   margin: 0.5rem 0 1rem 0;
-  opacity: 0.5;
+  opacity: 0.4;
 }
 
 /* ===== Links ===== */
 a {
-  color: #d4af37;
+  color: #8fd3c8;
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #ffdd88;
+  color: #b7ebe3;
 }
 
 /* ===== Post List ===== */
@@ -70,155 +70,112 @@ a:hover {
 .section-nav {
   margin: 1rem 0;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .section-nav ul {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
   list-style: none;
   padding: 0;
   margin: 0;
   gap: 10px;
-  min-width: max-content;
-}
-
-.section-nav li {
-  margin: 0;
-  flex: 0 0 auto;
 }
 
 .section-nav a {
-  display: inline-block;
   padding: 8px 14px;
   border-radius: 6px;
-  background: #d4af37;
-  color: #1a1410;
-  text-decoration: none;
+  background: #1e1e1e;
+  color: #8fd3c8;
+  border: 1px solid #2a2a2a;
   font-weight: 600;
-  transition: background 0.2s ease;
-  white-space: nowrap;
 }
 
 .section-nav a.active,
 .section-nav a:hover {
-  background: #1a1410;
-  color: #d4af37;
+  background: #8fd3c8;
+  color: #121212;
 }
 
-/* ===== Individual Post Card ===== */
+/* ===== Post Card ===== */
 .post-card {
-  background: #1a1410;
+  background: #1a1a1a;
   padding: 1.5rem;
   border-radius: 10px;
-  border: 1px solid #3a2a20;
-  transition: transform 0.2s, background 0.3s;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.2s;
 }
 
 .post-card:hover {
-  background: #221914;
   transform: translateX(5px);
 }
 
 .post-card h2 {
-  margin: 0 0 0.5rem 0;
-  color: #ffdd88;
-  font-size: 1.4rem;
+  margin: 0 0 0.5rem;
+  color: #f4f1ec;
 }
 
 .post-card time {
-  display: block;
   font-size: 0.9rem;
-  color: #a48c6c;
-  margin-bottom: 0.5rem;
+  color: #a8a5a0;
 }
 
-.post-card p {
-  margin: 0.5rem 0 0 0;
-  color: #dcdcdc;
-}
-
-/* ===== Blockquote (for piano notes) ===== */
+/* ===== Piano Notes (Blockquote) ===== */
 blockquote {
-  background: #1a1410;
-  border-left: 4px solid #d4af37;
-  color: #ffdd88;
+  background: #1a1a1a;
+  border-left: 4px solid #8fd3c8;
+  color: #eae7e2;
   font-family: 'Courier New', monospace;
   padding: 8px 12px;
-  margin: 0.5rem 0 1rem 0;
   border-radius: 6px;
-  box-shadow: 0 0 6px rgba(212, 175, 55, 0.4);
 }
 
 /* ===== Back Button ===== */
-.back-button-container {
-  margin-top: 2rem;
-  text-align: center;
-}
-
 .back-button {
-  display: inline-block;
   padding: 10px 18px;
-  background: #d4af37;
-  color: #1a1410;
-  text-decoration: none;
+  background: #8fd3c8;
+  color: #121212;
   font-weight: bold;
   border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .back-button:hover {
-  background: #1a1410;
-  color: #d4af37;
-  transform: translateY(-2px);
-  border: 1px solid #d4af37;
+  background: #b7ebe3;
 }
 
 /* ===== Footer ===== */
 footer {
   text-align: center;
   padding: 2rem 1rem;
-  border-top: 1px solid #3a2a20;
-  margin-top: 3rem;
-  font-size: 0.9rem;
-  color: #8c7b6a;
+  border-top: 1px solid #2a2a2a;
+  color: #9c9a95;
 }
 
-/* ===== Search Bar ===== */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-}
-
+/* ===== Search ===== */
 .search-container input {
-  width: 100%;
   max-width: 400px;
   padding: 10px 14px;
   border-radius: 6px;
-  border: 1px solid #3a2a20;
-  font-size: 1rem;
-  background: #1a1410;
-  color: #f5f5f5;
+  border: 1px solid #2a2a2a;
+  background: #1a1a1a;
+  color: #f4f1ec;
+}
+
+/* ===== INLINE CHORD TAGS ===== */
+.post .chord-inline {
+  display: inline-block;
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: #121212;
+  border: 1px solid #8fd3c8;
+  color: #8fd3c8;
+  font-weight: 600;
+  font-size: 0.85em;
+  line-height: 1;
+  white-space: nowrap;
 }
 
 /* ===== Responsive ===== */
-@media screen and (max-width: 900px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .post-card {
-    padding: 1.2rem;
-  }
-}
-
 @media screen and (max-width: 600px) {
   body {
     font-size: 0.95rem;
@@ -231,36 +188,4 @@ footer {
   .container {
     padding: 1rem;
   }
-
-  .post-card h2 {
-    font-size: 1.2rem;
-  }
-
-  .section-nav {
-    overflow-x: auto;
-    padding-bottom: 6px;
-  }
-
-  .section-nav ul {
-    justify-content: flex-start;
-  }
-}
-
-/* =====================================================
-   🎸 INLINE CHORD TAGS — FINAL & CLEAN
-   ===================================================== */
-
-.post .chord-inline {
-  display: inline-block;
-  padding: 2px 6px;
-  margin: 0 2px;
-  border-radius: 4px;
-  background: #1a1410;
-  border: 1px solid #d4af37;
-  color: #d4af37;
-  font-weight: 600;
-  font-size: 0.85em;
-  line-height: 1;
-  vertical-align: middle;
-  white-space: nowrap;
 }
