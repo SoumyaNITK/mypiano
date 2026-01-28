@@ -248,17 +248,25 @@ footer {
 }
 
 /* =====================================================
-   🎸 CHORD PLACEMENT (NEW – FOR CHORD POSTS)
+   🎸 CHORD PLACEMENT — WORD WRAPPED (FINAL)
    ===================================================== */
 
 .post .chord-line {
-  position: relative;
   line-height: 2.2;
+  margin: 0.8rem 0;
 }
 
-.post .chord {
+.post .cw {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.25em;
+}
+
+.post .cw .chord {
   position: absolute;
-  transform: translateY(-1.4em);
+  top: -1.35em;
+  left: 50%;
+  transform: translateX(-50%);
   font-weight: 600;
   font-size: 0.85rem;
   color: #d4af37;
