@@ -271,3 +271,22 @@ footer {
   vertical-align: middle;
   white-space: nowrap;
 }
+/* =========================================
+   FORCE COLOR CONSISTENCY (HOME + POST)
+   ========================================= */
+
+/* Site title everywhere */
+header h1,
+header h1 a {
+  color: #6ccfff !important;
+}
+
+/* Post page title */
+header h2 {
+  color: #e6e6e6;
+}
+
+/* Prevent default link overrides */
+header a:hover {
+  color: #9be1ff;
+}
