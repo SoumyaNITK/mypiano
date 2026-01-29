@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-  // Create a single floating preview element
+  // Create one floating preview container
   const preview = document.createElement("div");
   preview.style.position = "absolute";
   preview.style.width = "140px";
@@ -24,18 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
   chords.forEach(chord => {
 
-    const showPreview = (event) => {
+    const showPreview = () => {
       const chordName = chord.dataset.chord;
       if (!chordName) return;
 
+      // IMPORTANT:
+      // - encodeURIComponent handles A# → A%23
+      // - extension is .jpg (your images)
       const encoded = encodeURIComponent(chordName);
-      img.src = `/mypiano/assets/guitar-chords/${encoded}.png`;
+      img.src = `/mypiano/assets/guitar-chords/${encoded}.jpg`;
 
       preview.style.display = "block";
 
       const rect = chord.getBoundingClientRect();
       const top = rect.top + window.scrollY - preview.offsetHeight - 10;
-      const left = rect.left + window.scrollX + rect.width / 2 - preview.offsetWidth / 2;
+      const left =
+        rect.left +
+        window.scrollX +
+        rect.width / 2 -
+        preview.offsetWidth / 2;
 
       preview.style.top = `${Math.max(top, 10)}px`;
       preview.style.left = `${Math.max(left, 10)}px`;
@@ -49,13 +56,13 @@ document.addEventListener("DOMContentLoaded", () => {
     chord.addEventListener("mouseenter", showPreview);
     chord.addEventListener("mouseleave", hidePreview);
 
-    // Mobile & click support
+    // Mobile + click support
     chord.addEventListener("click", (e) => {
       e.stopPropagation();
       if (preview.style.display === "block") {
         hidePreview();
       } else {
-        showPreview(e);
+        showPreview();
       }
     });
   });
