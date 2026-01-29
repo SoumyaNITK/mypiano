@@ -30,7 +30,7 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #6ccfff; /* primary accent */
+  color: #6ccfff;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -90,21 +90,13 @@ a:hover {
   min-width: max-content;
 }
 
-.section-nav li {
-  margin: 0;
-  flex: 0 0 auto;
-}
-
 .section-nav a {
   display: inline-block;
   padding: 8px 14px;
   border-radius: 6px;
   background: linear-gradient(180deg, #6ccfff, #53bce9);
   color: #0b0d12;
-  text-decoration: none;
   font-weight: 600;
-  transition: background 0.25s ease, color 0.25s ease;
-  white-space: nowrap;
 }
 
 .section-nav a.active,
@@ -114,72 +106,56 @@ a:hover {
   border: 1px solid #6ccfff;
 }
 
-/* ===== Individual Post Card ===== */
+/* ===== Post Card ===== */
 .post-card {
   background: linear-gradient(180deg, #121722, #0f141d);
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #232833;
-  transition: transform 0.2s, background 0.3s;
-}
-
-.post-card:hover {
-  background: linear-gradient(180deg, #161c28, #111624);
-  transform: translateX(5px);
 }
 
 .post-card h2 {
-  margin: 0 0 0.5rem 0;
   color: #9be1ff;
-  font-size: 1.4rem;
 }
 
-.post-card time {
-  display: block;
-  font-size: 0.9rem;
-  color: #8b90a0;
-  margin-bottom: 0.5rem;
+/* ===== Post Content (CRITICAL FIX) ===== */
+.post {
+  white-space: normal;            /* reset browser weirdness */
+  font-size: 1rem;
+  line-height: 1.8;
 }
 
-.post-card p {
-  margin: 0.5rem 0 0 0;
-  color: #d2d4da;
+/* Each lyric paragraph */
+.post p {
+  margin: 0 0 0.75rem 0;           /* equal spacing for ALL lines */
 }
 
-/* ===== Blockquote (for piano notes) ===== */
-blockquote {
-  background: linear-gradient(180deg, #121722, #0f141d);
-  border-left: 4px solid #6ccfff;
-  color: #9be1ff;
-  font-family: 'Courier New', monospace;
-  padding: 8px 12px;
-  margin: 0.5rem 0 1rem 0;
-  border-radius: 6px;
-  box-shadow: 0 0 8px rgba(108, 207, 255, 0.25);
+/* Extra space between stanzas */
+.post p + hr,
+.post hr {
+  margin: 1.8rem 0;
+  border: none;
+  border-top: 1px solid #232833;
 }
 
-/* ===== Back Button ===== */
-.back-button-container {
-  margin-top: 2rem;
-  text-align: center;
+/* Prevent line-break compression */
+.post br {
+  line-height: 1.8;
 }
 
-.back-button {
+/* ===== Inline Chords ===== */
+.post .chord-inline {
   display: inline-block;
-  padding: 10px 18px;
-  background: linear-gradient(180deg, #6ccfff, #53bce9);
-  color: #0b0d12;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.back-button:hover {
-  background: #0b0d12;
-  color: #6ccfff;
-  transform: translateY(-2px);
+  padding: 2px 6px;
+  margin: 0 2px;
+  border-radius: 4px;
+  background: linear-gradient(180deg, #121722, #0f141d);
   border: 1px solid #6ccfff;
+  color: #6ccfff;
+  font-weight: 600;
+  font-size: 0.85em;
+  vertical-align: middle;
+  white-space: nowrap;
 }
 
 /* ===== Footer ===== */
@@ -192,102 +168,19 @@ footer {
   color: #8b90a0;
 }
 
-/* ===== Search Bar ===== */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-}
-
-.search-container input {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: 1px solid #232833;
-  font-size: 1rem;
-  background: #0f141d;
-  color: #e6e6e6;
-}
-
 /* ===== Responsive ===== */
-@media screen and (max-width: 900px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .post-card {
-    padding: 1.2rem;
-  }
-}
-
 @media screen and (max-width: 600px) {
   body {
     font-size: 0.95rem;
   }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  .container {
-    padding: 1rem;
-  }
-
-  .post-card h2 {
-    font-size: 1.2rem;
-  }
-
-  .section-nav {
-    overflow-x: auto;
-    padding-bottom: 6px;
-  }
-
-  .section-nav ul {
-    justify-content: flex-start;
-  }
 }
 
-/* =====================================================
-   🎸 INLINE CHORD TAGS — FINAL & CLEAN
-   ===================================================== */
-
-.post .chord-inline {
-  display: inline-block;
-  padding: 2px 6px;
-  margin: 0 2px;
-  border-radius: 4px;
-  background: linear-gradient(180deg, #121722, #0f141d);
-  border: 1px solid #6ccfff;
-  color: #6ccfff;
-  font-weight: 600;
-  font-size: 0.85em;
-  line-height: 1;
-  vertical-align: middle;
-  white-space: nowrap;
-}
-/* =========================================
-   FORCE COLOR CONSISTENCY (HOME + POST)
-   ========================================= */
-
-/* Site title everywhere */
+/* ===== Force Color Consistency ===== */
 header h1,
 header h1 a {
   color: #6ccfff !important;
 }
 
-/* Post page title */
 header h2 {
   color: #e6e6e6;
 }
-
-/* Prevent default link overrides */
-header a:hover {
-  color: #9be1ff;
-}
-
