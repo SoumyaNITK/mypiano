@@ -314,3 +314,7 @@ header h2 {
 header a:hover {
   color: #9be1ff;
 }
+.post {
+  white-space: pre-wrap;
+}
+
