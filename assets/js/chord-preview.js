@@ -21,55 +21,63 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.appendChild(preview);
 
   const chords = document.querySelectorAll(".chord-inline");
+  let activeChord = null; // track which chord is open
+
+  const showPreview = (chord) => {
+    const chordName = chord.dataset.chord;
+    if (!chordName) return;
+
+    const encoded = encodeURIComponent(chordName);
+    img.src = `/mypiano/assets/guitar-chords/${encoded}.jpg`;
+
+    const rect = chord.getBoundingClientRect();
+    const top = rect.top + window.scrollY - preview.offsetHeight - 10;
+    const left =
+      rect.left +
+      window.scrollX +
+      rect.width / 2 -
+      preview.offsetWidth / 2;
+
+    preview.style.top = `${Math.max(top, 10)}px`;
+    preview.style.left = `${Math.max(left, 10)}px`;
+    preview.style.display = "block";
+
+    activeChord = chord;
+  };
+
+  const hidePreview = () => {
+    preview.style.display = "none";
+    activeChord = null;
+  };
 
   chords.forEach(chord => {
 
-    const showPreview = () => {
-      const chordName = chord.dataset.chord;
-      if (!chordName) return;
-
-      // IMPORTANT:
-      // - encodeURIComponent handles A# → A%23
-      // - extension is .jpg (your images)
-      const encoded = encodeURIComponent(chordName);
-      img.src = `/mypiano/assets/guitar-chords/${encoded}.jpg`;
-
-      preview.style.display = "block";
-
-      const rect = chord.getBoundingClientRect();
-      const top = rect.top + window.scrollY - preview.offsetHeight - 10;
-      const left =
-        rect.left +
-        window.scrollX +
-        rect.width / 2 -
-        preview.offsetWidth / 2;
-
-      preview.style.top = `${Math.max(top, 10)}px`;
-      preview.style.left = `${Math.max(left, 10)}px`;
-    };
-
-    const hidePreview = () => {
-      preview.style.display = "none";
-    };
-
     // Desktop hover
-    chord.addEventListener("mouseenter", showPreview);
-    chord.addEventListener("mouseleave", hidePreview);
+    chord.addEventListener("mouseenter", () => {
+      showPreview(chord);
+    });
 
-    // Mobile + click support
+    chord.addEventListener("mouseleave", () => {
+      hidePreview();
+    });
+
+    // Mobile + click logic (FIXED)
     chord.addEventListener("click", (e) => {
       e.stopPropagation();
-      if (preview.style.display === "block") {
+
+      if (activeChord === chord) {
+        // Same chord tapped again → close
         hidePreview();
       } else {
-        showPreview();
+        // Different chord tapped → switch immediately
+        showPreview(chord);
       }
     });
   });
 
-  // Hide when clicking anywhere else
+  // Close only when clicking outside chords
   document.addEventListener("click", () => {
-    preview.style.display = "none";
+    hidePreview();
   });
 
 });
