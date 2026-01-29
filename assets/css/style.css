@@ -48,7 +48,7 @@ header p {
   border: 0;
   height: 1px;
   background: linear-gradient(to right, transparent, #6ccfff, transparent);
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.8rem 0 1.2rem;
   opacity: 0.6;
 }
 
@@ -78,35 +78,23 @@ a:hover {
 .section-nav {
   margin: 1rem 0;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .section-nav ul {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
-  list-style: none;
+  gap: 10px;
   padding: 0;
   margin: 0;
-  gap: 10px;
-  min-width: max-content;
-}
-
-.section-nav li {
-  margin: 0;
-  flex: 0 0 auto;
+  list-style: none;
 }
 
 .section-nav a {
-  display: inline-block;
   padding: 8px 14px;
   border-radius: 6px;
   background: linear-gradient(180deg, #6ccfff, #53bce9);
   color: #0b0d12;
-  text-decoration: none;
   font-weight: 600;
-  transition: background 0.25s ease, color 0.25s ease;
-  white-space: nowrap;
 }
 
 .section-nav a.active,
@@ -122,66 +110,20 @@ a:hover {
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #232833;
-  transition: transform 0.2s, background 0.3s;
-}
-
-.post-card:hover {
-  background: linear-gradient(180deg, #161c28, #111624);
-  transform: translateX(5px);
 }
 
 .post-card h2 {
-  margin: 0 0 0.5rem 0;
   color: #9be1ff;
   font-size: 1.4rem;
 }
 
-.post-card time {
-  display: block;
-  font-size: 0.9rem;
-  color: #8b90a0;
-  margin-bottom: 0.5rem;
-}
-
-.post-card p {
-  margin: 0.5rem 0 0 0;
-  color: #d2d4da;
-}
-
-/* ===== Blockquote (for piano notes) ===== */
+/* ===== Blockquote ===== */
 blockquote {
   background: linear-gradient(180deg, #121722, #0f141d);
   border-left: 4px solid #6ccfff;
-  color: #9be1ff;
-  font-family: 'Courier New', monospace;
   padding: 8px 12px;
-  margin: 0.5rem 0 1rem 0;
+  margin: 0.8rem 0 1.2rem;
   border-radius: 6px;
-  box-shadow: 0 0 8px rgba(108, 207, 255, 0.25);
-}
-
-/* ===== Back Button ===== */
-.back-button-container {
-  margin-top: 2rem;
-  text-align: center;
-}
-
-.back-button {
-  display: inline-block;
-  padding: 10px 18px;
-  background: linear-gradient(180deg, #6ccfff, #53bce9);
-  color: #0b0d12;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
-}
-
-.back-button:hover {
-  background: #0b0d12;
-  color: #6ccfff;
-  transform: translateY(-2px);
-  border: 1px solid #6ccfff;
 }
 
 /* ===== Footer ===== */
@@ -194,93 +136,45 @@ footer {
   color: #8b90a0;
 }
 
-/* ===== Search Bar ===== */
-.search-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 2rem;
-  padding: 0 1rem;
-}
-
-.search-container input {
-  width: 100%;
-  max-width: 400px;
-  padding: 10px 14px;
-  border-radius: 6px;
-  border: 1px solid #232833;
-  font-size: 1rem;
-  background: #0f141d;
-  color: #e6e6e6;
-}
-
-/* ===== Responsive ===== */
-@media screen and (max-width: 900px) {
-  .container {
-    padding: 1.5rem;
-  }
-
-  header h1 {
-    font-size: 2rem;
-  }
-
-  .post-card {
-    padding: 1.2rem;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  body {
-    font-size: 0.95rem;
-  }
-
-  header h1 {
-    font-size: 1.8rem;
-  }
-
-  .container {
-    padding: 1rem;
-  }
-
-  .post-card h2 {
-    font-size: 1.2rem;
-  }
-
-  .section-nav {
-    overflow-x: auto;
-    padding-bottom: 6px;
-  }
-
-  .section-nav ul {
-    justify-content: flex-start;
-  }
-}
-
 /* =====================================================
-   📖 POST CONTENT TYPOGRAPHY (NEW – ONLY CHANGE)
+   📖 POST CONTENT TYPOGRAPHY (FIXED)
    ===================================================== */
 
 .post {
-  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-  font-size: 0.9rem;        /* bigger & comfortable */
-  line-height: 1.85;
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.7;
   color: #e8e8e8;
 }
 
-.post p,
-.post li {
-  margin-bottom: 1.1rem;
+/* Each lyric line */
+.post p {
+  margin: 0.4em 0;
 }
 
+/* Stanza break (blank line) */
+.post p + p {
+  margin-top: 0.55em;
+}
+
+/* Headings inside post */
 .post h2,
 .post h3 {
-  font-weight: 600;
-  margin-top: 2.2rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
   color: #9be1ff;
+  font-weight: 600;
+}
+
+/* Horizontal rules */
+.post hr {
+  margin: 1.4rem 0;
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.35);
 }
 
 /* =====================================================
-   🎸 INLINE CHORD TAGS — FINAL & CLEAN
+   🎸 INLINE CHORD TAGS
    ===================================================== */
 
 .post .chord-inline {
@@ -288,7 +182,7 @@ footer {
   padding: 2px 6px;
   margin: 0 2px;
   border-radius: 4px;
-  background: linear-gradient(180deg, #121722, #0f141d);
+  background: #121722;
   border: 1px solid #6ccfff;
   color: #6ccfff;
   font-weight: 600;
@@ -298,10 +192,7 @@ footer {
   white-space: nowrap;
 }
 
-/* =========================================
-   FORCE COLOR CONSISTENCY (HOME + POST)
-   ========================================= */
-
+/* ===== Force color consistency ===== */
 header h1,
 header h1 a {
   color: #6ccfff !important;
@@ -310,11 +201,3 @@ header h1 a {
 header h2 {
   color: #e6e6e6;
 }
-
-header a:hover {
-  color: #9be1ff;
-}
-.post {
-  white-space: pre-wrap;
-}
-
