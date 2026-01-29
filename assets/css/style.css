@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
 /* ===== Dark Elegant Theme (Piano Vibes – Unified) ===== */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -30,7 +32,7 @@ header {
 
 header h1 {
   font-size: 2.5rem;
-  color: #6ccfff; /* primary accent */
+  color: #6ccfff;
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -254,6 +256,30 @@ footer {
 }
 
 /* =====================================================
+   📖 POST CONTENT TYPOGRAPHY (NEW – ONLY CHANGE)
+   ===================================================== */
+
+.post {
+  font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
+  font-size: 1.1rem;        /* bigger & comfortable */
+  line-height: 1.85;
+  color: #e8e8e8;
+}
+
+.post p,
+.post li {
+  margin-bottom: 1.1rem;
+}
+
+.post h2,
+.post h3 {
+  font-weight: 600;
+  margin-top: 2.2rem;
+  margin-bottom: 1rem;
+  color: #9be1ff;
+}
+
+/* =====================================================
    🎸 INLINE CHORD TAGS — FINAL & CLEAN
    ===================================================== */
 
@@ -266,27 +292,25 @@ footer {
   border: 1px solid #6ccfff;
   color: #6ccfff;
   font-weight: 600;
-  font-size: 0.85em;
+  font-size: 0.9em;
   line-height: 1;
   vertical-align: middle;
   white-space: nowrap;
 }
+
 /* =========================================
    FORCE COLOR CONSISTENCY (HOME + POST)
    ========================================= */
 
-/* Site title everywhere */
 header h1,
 header h1 a {
   color: #6ccfff !important;
 }
 
-/* Post page title */
 header h2 {
   color: #e6e6e6;
 }
 
-/* Prevent default link overrides */
 header a:hover {
   color: #9be1ff;
 }
