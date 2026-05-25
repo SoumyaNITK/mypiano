@@ -331,7 +331,7 @@ header h2 {
 
 /* Image */
 .chord-grid img {
-  width: 65px;
+  width: 90px;
   height: auto;
 
   border-radius: 6px;
@@ -355,4 +355,29 @@ header h2 {
   font-size: 0.75rem;
   color: #9be1ff;
   font-weight: 500;
+}
+
+/* =========================================
+   🎸 CHORD SECTION TITLE (HIGHLIGHTED)
+   ========================================= */
+
+.post h2:first-of-type {
+  display: inline-block;
+  padding: 6px 14px;
+
+  background: linear-gradient(90deg, #6ccfff, #4fb3e0);
+  color: #0b0d12;
+
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  margin-bottom: 0.6rem;
+}
+
+.chord-grid {
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(108, 207, 255, 0.05);
+  border: 1px solid rgba(108, 207, 255, 0.15);
 }
