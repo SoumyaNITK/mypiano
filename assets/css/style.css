@@ -215,14 +215,10 @@ header h2 {
   color: #e6e6e6;
 }
 
-/* =========================================
-   🎵 NOTES vs LYRICS DESIGN (MASTERCLASS)
-   ========================================= */
-
 /* Lyrics line */
 .post strong {
   display: block;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #e6e6e6;
 
