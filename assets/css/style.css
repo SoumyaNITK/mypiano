@@ -124,7 +124,7 @@ a:hover {
 /* ===== Post Content (FIXED) ===== */
 .post {
   font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-size: 0.9rem;
+  font-size: 1.2rem;
   line-height: 1.7;
   color: #f1f5fb;   /* 👈 brighter lyrics */
 }
@@ -229,7 +229,7 @@ header h2 {
   margin: 0 0 0.8rem 0;
   border-radius: 6px;
   font-family: 'Courier New', monospace;
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   color: #9be1ff;
   letter-spacing: 1px;
   word-spacing: 6px;
@@ -299,7 +299,7 @@ header h2 {
 
 .chord-grid span {
   margin-top: 4px;
-  font-size: 0.75rem;
+  font-size: 1.2rem;
   color: #9be1ff;
   font-weight: 500;
 }
