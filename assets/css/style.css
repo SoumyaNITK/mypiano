@@ -76,18 +76,15 @@ a:hover {
 .section-nav {
   margin: 1rem 0;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
 }
 
 .section-nav ul {
   display: flex;
   justify-content: center;
-  flex-wrap: nowrap;
-  list-style: none;
+  gap: 10px;
   padding: 0;
   margin: 0;
-  gap: 10px;
-  min-width: max-content;
+  list-style: none;
 }
 
 .section-nav a {
@@ -112,35 +109,27 @@ a:hover {
   padding: 1.5rem;
   border-radius: 10px;
   border: 1px solid #232833;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.post-card:hover {
+  background: linear-gradient(180deg, #161c28, #111624);
+  transform: translateX(5px);
 }
 
 .post-card h2 {
   color: #9be1ff;
 }
 
-/* ===== Post Content (CRITICAL FIX) ===== */
+/* ===== Post Content ===== */
 .post {
-  white-space: normal;            /* reset browser weirdness */
-  font-size: 1rem;
-  line-height: 1.8;
+  font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
+  font-size: 0.88rem;     /* slightly smaller so lyrics fit */
+  line-height: 1.6;
 }
 
-/* Each lyric paragraph */
 .post p {
-  margin: 0 0 0.75rem 0;           /* equal spacing for ALL lines */
-}
-
-/* Extra space between stanzas */
-.post p + hr,
-.post hr {
-  margin: 1.8rem 0;
-  border: none;
-  border-top: 1px solid #232833;
-}
-
-/* Prevent line-break compression */
-.post br {
-  line-height: 1.8;
+  margin: 0.4rem 0;
 }
 
 /* ===== Inline Chords ===== */
@@ -156,6 +145,47 @@ a:hover {
   font-size: 0.85em;
   vertical-align: middle;
   white-space: nowrap;
+}
+
+/* ===== Search Bar ===== */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+  padding: 0 1rem;
+}
+
+.search-container input {
+  width: 100%;
+  max-width: 420px;
+  padding: 12px 16px;
+  border-radius: 8px;
+
+  background: linear-gradient(180deg, #121722, #0f141d);
+  border: 1px solid #2a3240;
+
+  color: #e6e6e6;
+  font-size: 0.95rem;
+
+  outline: none;
+  transition: all 0.25s ease;
+}
+
+/* Placeholder */
+.search-container input::placeholder {
+  color: #7f8795;
+}
+
+/* Focus glow */
+.search-container input:focus {
+  border-color: #6ccfff;
+  box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
+  background: #0f141d;
+}
+
+/* Hover */
+.search-container input:hover {
+  border-color: #3a4455;
 }
 
 /* ===== Footer ===== */
