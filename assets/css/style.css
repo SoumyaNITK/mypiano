@@ -282,3 +282,31 @@ header h2 {
   transform: translateY(0);
   box-shadow: 0 0 6px rgba(108, 207, 255, 0.3);
 }
+
+/* Container (targets only "Chords Used" section) */
+.post h2:first-of-type + p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+
+/* Chord images */
+.post h2:first-of-type + p img {
+  width: 80px;
+  height: auto;
+
+  border-radius: 6px;
+  border: 1px solid #2a3240;
+
+  background: linear-gradient(180deg, #121722, #0f141d);
+  padding: 4px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect */
+.post h2:first-of-type + p img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
+}
