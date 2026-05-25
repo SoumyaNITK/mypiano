@@ -310,3 +310,49 @@ header h2 {
   transform: scale(1.05);
   box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
 }
+
+/* =========================================
+   🎸 CHORD GRID (FINAL CLEAN VERSION)
+   ========================================= */
+
+.chord-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin: 0.8rem 0 1.2rem 0;
+}
+
+/* Each chord box */
+.chord-grid div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Image */
+.chord-grid img {
+  width: 65px;
+  height: auto;
+
+  border-radius: 6px;
+  border: 1px solid #2a3240;
+
+  background: #0f141d;
+  padding: 4px;
+
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover */
+.chord-grid img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
+}
+
+/* Chord name */
+.chord-grid span {
+  margin-top: 4px;
+  font-size: 0.75rem;
+  color: #9be1ff;
+  font-weight: 500;
+}
