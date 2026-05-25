@@ -216,35 +216,39 @@ header h2 {
 }
 
 /* =========================================
-   📄 POST PAGE DESIGN IMPROVEMENT
+   🎵 NOTES vs LYRICS DESIGN (MASTERCLASS)
    ========================================= */
 
-.post {
+/* Lyrics line */
+.post strong {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e6e6e6;
+
+  margin-top: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* Notes block */
+.post blockquote {
   background: linear-gradient(180deg, #121722, #0f141d);
-  padding: 1.8rem;
-  border-radius: 12px;
-  border: 1px solid #232833;
+  border-left: 4px solid #6ccfff;
 
-  max-width: 720px;
-  margin: 0 auto;
-}
+  padding: 10px 14px;
+  margin: 0 0 0.8rem 0;
 
-/* Headings inside post */
-.post h2,
-.post h3 {
+  border-radius: 6px;
+
+  font-family: 'Courier New', monospace;
+  font-size: 0.95rem;
   color: #9be1ff;
-  margin-top: 1.8rem;
-  margin-bottom: 0.8rem;
+
+  letter-spacing: 1px;
+  word-spacing: 6px;
 }
 
-/* Paragraph spacing */
-.post p {
-  margin: 0.45rem 0;
-}
-
-/* Horizontal line styling */
-.post hr {
-  border: none;
-  border-top: 1px solid #2a3240;
-  margin: 1.6rem 0;
+/* Subtle separation between sections */
+.post strong + blockquote {
+  box-shadow: 0 0 8px rgba(108, 207, 255, 0.15);
 }
