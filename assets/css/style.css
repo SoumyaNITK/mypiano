@@ -311,10 +311,6 @@ header h2 {
   box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
 }
 
-/* =========================================
-   🎸 CHORD GRID (FINAL CLEAN VERSION)
-   ========================================= */
-
 .chord-grid {
   display: flex;
   flex-wrap: wrap;
@@ -331,7 +327,7 @@ header h2 {
 
 /* Image */
 .chord-grid img {
-  width: 90px;
+  width: 110px;
   height: auto;
 
   border-radius: 6px;
@@ -356,10 +352,6 @@ header h2 {
   color: #9be1ff;
   font-weight: 500;
 }
-
-/* =========================================
-   🎸 CHORD SECTION TITLE (HIGHLIGHTED)
-   ========================================= */
 
 .post h2:first-of-type {
   display: inline-block;
