@@ -214,3 +214,37 @@ header h1 a {
 header h2 {
   color: #e6e6e6;
 }
+
+/* =========================================
+   📄 POST PAGE DESIGN IMPROVEMENT
+   ========================================= */
+
+.post {
+  background: linear-gradient(180deg, #121722, #0f141d);
+  padding: 1.8rem;
+  border-radius: 12px;
+  border: 1px solid #232833;
+
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+/* Headings inside post */
+.post h2,
+.post h3 {
+  color: #9be1ff;
+  margin-top: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+/* Paragraph spacing */
+.post p {
+  margin: 0.45rem 0;
+}
+
+/* Horizontal line styling */
+.post hr {
+  border: none;
+  border-top: 1px solid #2a3240;
+  margin: 1.6rem 0;
+}
