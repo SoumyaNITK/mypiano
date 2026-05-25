@@ -121,15 +121,18 @@ a:hover {
   color: #9be1ff;
 }
 
-/* ===== Post Content ===== */
+/* ===== Post Content (FIXED) ===== */
 .post {
   font-family: system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
-  font-size: 0.88rem;     /* slightly smaller so lyrics fit */
-  line-height: 1.6;
+  font-size: 0.9rem;
+  line-height: 1.7;
+  color: #f1f5fb;   /* 👈 brighter lyrics */
 }
 
 .post p {
-  margin: 0.4rem 0;
+  margin: 0.45rem 0;
+  color: #e6ebf3;   /* 👈 soft bright white */
+  font-weight: 500;
 }
 
 /* ===== Inline Chords ===== */
@@ -160,30 +163,24 @@ a:hover {
   max-width: 420px;
   padding: 12px 16px;
   border-radius: 8px;
-
   background: linear-gradient(180deg, #121722, #0f141d);
   border: 1px solid #2a3240;
-
   color: #e6e6e6;
   font-size: 0.95rem;
-
   outline: none;
   transition: all 0.25s ease;
 }
 
-/* Placeholder */
 .search-container input::placeholder {
   color: #7f8795;
 }
 
-/* Focus glow */
 .search-container input:focus {
   border-color: #6ccfff;
   box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
   background: #0f141d;
 }
 
-/* Hover */
 .search-container input:hover {
   border-color: #3a4455;
 }
@@ -215,137 +212,91 @@ header h2 {
   color: #e6e6e6;
 }
 
-/* Lyrics line */
+/* ===== Notes Styling ===== */
 .post strong {
   display: block;
   font-size: 1.2rem;
   font-weight: 600;
   color: #e6e6e6;
-
   margin-top: 1.2rem;
   margin-bottom: 0.3rem;
 }
 
-/* Notes block */
 .post blockquote {
   background: linear-gradient(180deg, #121722, #0f141d);
   border-left: 4px solid #6ccfff;
-
   padding: 10px 14px;
   margin: 0 0 0.8rem 0;
-
   border-radius: 6px;
-
   font-family: 'Courier New', monospace;
   font-size: 0.95rem;
   color: #9be1ff;
-
   letter-spacing: 1px;
   word-spacing: 6px;
 }
 
-/* Subtle separation between sections */
 .post strong + blockquote {
   box-shadow: 0 0 8px rgba(108, 207, 255, 0.15);
 }
 
+/* ===== Back Button ===== */
 .back-button {
   display: inline-block;
   padding: 10px 20px;
-
   background: linear-gradient(180deg, #6ccfff, #4fb3e0);
   color: #0b0d12;
-
   text-decoration: none;
   font-weight: 600;
   border-radius: 8px;
-
   border: 1px solid rgba(108, 207, 255, 0.6);
-
   transition: all 0.25s ease;
 }
 
-/* Hover effect */
 .back-button:hover {
   background: #0b0d12;
   color: #6ccfff;
-
   border: 1px solid #6ccfff;
-
   transform: translateY(-2px);
-
   box-shadow: 0 0 10px rgba(108, 207, 255, 0.5);
 }
 
-/* Click (active) */
 .back-button:active {
   transform: translateY(0);
   box-shadow: 0 0 6px rgba(108, 207, 255, 0.3);
 }
 
-/* Container (targets only "Chords Used" section) */
-.post h2:first-of-type + p {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-top: 0.5rem;
-}
-
-/* Chord images */
-.post h2:first-of-type + p img {
-  width: 80px;
-  height: auto;
-
-  border-radius: 6px;
-  border: 1px solid #2a3240;
-
-  background: linear-gradient(180deg, #121722, #0f141d);
-  padding: 4px;
-
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-/* Hover effect */
-.post h2:first-of-type + p img:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
-}
-
+/* ===== Chord Grid ===== */
 .chord-grid {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
   margin: 0.8rem 0 1.2rem 0;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(108, 207, 255, 0.05);
+  border: 1px solid rgba(108, 207, 255, 0.15);
 }
 
-/* Each chord box */
 .chord-grid div {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* Image */
 .chord-grid img {
   width: 150px;
-  height: auto;
-
   border-radius: 6px;
   border: 1px solid #2a3240;
-
   background: #0f141d;
   padding: 4px;
-
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Hover */
 .chord-grid img:hover {
   transform: scale(1.08);
   box-shadow: 0 0 8px rgba(108, 207, 255, 0.4);
 }
 
-/* Chord name */
 .chord-grid span {
   margin-top: 4px;
   font-size: 0.75rem;
@@ -356,20 +307,10 @@ header h2 {
 .post h2:first-of-type {
   display: inline-block;
   padding: 6px 14px;
-
   background: linear-gradient(90deg, #6ccfff, #4fb3e0);
   color: #0b0d12;
-
   border-radius: 6px;
   font-size: 1rem;
   font-weight: 600;
-
   margin-bottom: 0.6rem;
-}
-
-.chord-grid {
-  padding: 10px 12px;
-  border-radius: 10px;
-  background: rgba(108, 207, 255, 0.05);
-  border: 1px solid rgba(108, 207, 255, 0.15);
 }
